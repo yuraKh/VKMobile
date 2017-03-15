@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_massages"
+            android:icon="@drawable/ic_menu_messages"
+            android:title="@string/massages" />
+        <item
+            android:id="@+id/nav_friends"
+            android:icon="@drawable/ic_menu_friends"
+            android:title="@string/friends" />
+        <item
+            android:id="@+id/nav_communities"
+            android:icon="@drawable/ic_menu_communities"
+            android:title="@string/communities" />
+        <item
+            android:id="@+id/nav_photos"
+            android:icon="@drawable/ic_menu_photos"
+            android:title="@string/photos" />
+        <item
+            android:id="@+id/nav_videos"
+            android:icon="@drawable/ic_menu_videos"
+            android:title="@string/videos" />
+        <item
+            android:id="@+id/nav_music"
+            android:icon="@drawable/ic_menu_music"
+            android:title="@string/music" />
+
+        <item
+            android:id="@+id/nav_bookmarks"
+            android:icon="@drawable/ic_menu_bookmarks"
+            android:title="@string/bookmarks" />
+    </group>
+
+    <item android:title="Other">
+        <menu>
+            <item
+                android:id="@+id/nav_setting"
+                android:icon="@drawable/ic_menu_settings"
+                android:title="@string/setting" />
+            <item
+                android:id="@+id/nav_search"
+                android:icon="@drawable/ic_menu_search"
+                android:title="@string/search" />
+        </menu>
+    </item>
+
+</menu>

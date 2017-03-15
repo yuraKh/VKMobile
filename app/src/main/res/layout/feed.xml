@@ -1,0 +1,245 @@
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="0dp"
+    android:layout_marginBottom="2dp"
+    android:layout_marginTop="2dp"
+    android:layout_marginRight="1dp"
+    android:layout_marginLeft="1dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="41.0dip"
+                android:layout_height="41.0dip"
+                android:layout_margin="5.0dip">
+
+                <ImageView
+                    android:id="@id/iv_online_status"
+                    android:layout_width="16.0dip"
+                    android:layout_height="16.0dip"
+                    android:layout_gravity="bottom|center|right"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/online_green"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@id/img_posts_news_user_photo"
+                    android:layout_width="41.0dip"
+                    android:layout_height="41.0dip"
+                    android:scaleType="centerCrop" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="41.0dip"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@id/tv_posts_news_user_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10.0dip"
+                    android:layout_weight="1.0"
+                    android:textSize="@dimen/text_size_small"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@id/tv_posts_news_ago"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5.0dip"
+                    android:textSize="@dimen/text_size_smaller" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@id/copy_text"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_small"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:id="@id/original_name_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="10.0dip"
+                    android:layout_height="10.0dip"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="3.0dip"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/retweeted_icon" />
+
+                <TextView
+                    android:id="@id/original_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="10.0dip"
+                    android:textSize="@dimen/text_size_small"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@id/tv_posts_news_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:linksClickable="false"
+                android:textSize="@dimen/text_size_small" />
+
+            <TextView
+                android:id="@id/signer"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_small"
+                android:visibility="gone"/>
+
+            <include
+                layout="@layout/attachments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="1.0dip"
+                    android:layout_height="5.0dip" />
+
+                <LinearLayout
+                    android:id="@id/comments_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10.0dip"
+                    android:paddingLeft="15.0dip"
+                    android:paddingRight="15.0dip"
+                    android:paddingTop="10.0dip">
+
+                    <ImageView
+                        android:layout_width="16.0dip"
+                        android:layout_height="16.0dip"
+                        android:layout_gravity="center_vertical"
+                        android:contentDescription="@string/comments"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/icon_comments_count" />
+
+                    <TextView
+                        android:id="@id/tv_posts_news_comments_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5.0dip"
+                        android:text="0"
+                        android:textColor="@color/solid_like_count_color"
+                        android:textSize="@dimen/text_size_small" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@id/reposts_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10.0dip"
+                    android:paddingLeft="15.0dip"
+                    android:paddingRight="15.0dip"
+                    android:paddingTop="10.0dip">
+
+                    <ImageView
+                        android:layout_width="16.0dip"
+                        android:layout_height="16.0dip"
+                        android:layout_gravity="center_vertical"
+                        android:contentDescription="@string/label_share"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/reposts_count_icon" />
+
+                    <TextView
+                        android:id="@id/tv_reposts_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5.0dip"
+                        android:text="0"
+                        android:textColor="@color/solid_like_count_color"
+                        android:textSize="@dimen/text_size_small" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@id/likes_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10.0dip"
+                    android:paddingLeft="15.0dip"
+                    android:paddingRight="15.0dip"
+                    android:paddingTop="10.0dip">
+
+                    <ImageView
+                        android:id="@id/likes_heart"
+                        android:layout_width="16.0dip"
+                        android:layout_height="16.0dip"
+                        android:layout_gravity="center_vertical"
+                        android:contentDescription="@string/likes"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/heart_icon" />
+
+                    <TextView
+                        android:id="@id/tv_posts_news_like_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5.0dip"
+                        android:textColor="@color/solid_like_count_color"
+                        android:textSize="@dimen/text_size_small" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@id/comments_container"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+            <TextView
+                android:id="@id/tv_post_type"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="0.0dip"
+                android:layout_marginLeft="0.0dip"
+                android:layout_marginRight="5.0dip"
+                android:layout_marginTop="5.0dip"
+                android:text="@string/label_postponed_post"
+                android:visibility="gone" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
